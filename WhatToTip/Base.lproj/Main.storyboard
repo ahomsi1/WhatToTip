@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--What To Tip View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WhatToTipViewController" customModule="WhatToTip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cEX-ep-Ha6">
+                                <rect key="frame" x="16" y="202" width="343" height="63"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hma-nv-ek1">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5F-Bt-LuR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your total with tip is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIX-PS-9mx">
+                                <rect key="frame" x="16" y="497" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7Q-Mo-sJw">
+                                <rect key="frame" x="16" y="417" width="343" height="72"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should tip:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyQ-17-Uiy">
+                                <rect key="frame" x="16" y="388" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwv-qd-Quw">
+                                <rect key="frame" x="16" y="526" width="343" height="72"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take the thinking out of tipping with What2Tip!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yA-21-5Py">
+                                <rect key="frame" x="16" y="61" width="343" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pyQ-17-Uiy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7nu-f0-3TN"/>
+                            <constraint firstItem="cEX-ep-Ha6" firstAttribute="trailing" secondItem="Hma-nv-ek1" secondAttribute="trailing" id="8oF-FJ-Xqd"/>
+                            <constraint firstItem="0yA-21-5Py" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9xQ-SF-gJg"/>
+                            <constraint firstItem="RIX-PS-9mx" firstAttribute="top" secondItem="w7Q-Mo-sJw" secondAttribute="bottom" constant="8" id="B9m-sD-SzA"/>
+                            <constraint firstItem="Kwv-qd-Quw" firstAttribute="leading" secondItem="RIX-PS-9mx" secondAttribute="leading" id="CBW-JR-syU"/>
+                            <constraint firstItem="Hma-nv-ek1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="G1X-x8-Cah"/>
+                            <constraint firstItem="cEX-ep-Ha6" firstAttribute="top" secondItem="0yA-21-5Py" secondAttribute="bottom" constant="93" id="Gms-Br-nbV"/>
+                            <constraint firstItem="Hma-nv-ek1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Gzg-jp-T6D"/>
+                            <constraint firstItem="Kwv-qd-Quw" firstAttribute="top" secondItem="RIX-PS-9mx" secondAttribute="bottom" constant="8" id="PPI-cg-VVj"/>
+                            <constraint firstItem="Kwv-qd-Quw" firstAttribute="trailing" secondItem="RIX-PS-9mx" secondAttribute="trailing" id="Ptb-RS-B2B"/>
+                            <constraint firstItem="RIX-PS-9mx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ru8-Qb-Ju0"/>
+                            <constraint firstItem="cEX-ep-Ha6" firstAttribute="leading" secondItem="Hma-nv-ek1" secondAttribute="leading" id="TlP-hd-Dfy"/>
+                            <constraint firstItem="pyQ-17-Uiy" firstAttribute="top" secondItem="Hma-nv-ek1" secondAttribute="bottom" constant="40" id="dN8-N4-cdY"/>
+                            <constraint firstItem="w7Q-Mo-sJw" firstAttribute="top" secondItem="pyQ-17-Uiy" secondAttribute="bottom" constant="8" id="duO-4m-5pE"/>
+                            <constraint firstItem="w7Q-Mo-sJw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hYV-Xd-drk"/>
+                            <constraint firstItem="w7Q-Mo-sJw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="j5a-Hd-buo"/>
+                            <constraint firstItem="RIX-PS-9mx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lbz-ye-HF3"/>
+                            <constraint firstItem="Hma-nv-ek1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ld8-G2-EdK"/>
+                            <constraint firstItem="pyQ-17-Uiy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mAW-ey-50R"/>
+                            <constraint firstItem="0yA-21-5Py" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mco-Bc-6nO"/>
+                            <constraint firstItem="0yA-21-5Py" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="wnF-V2-fH4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculateButtonLabel" destination="Hma-nv-ek1" id="chE-OM-FbW"/>
+                        <outlet property="enteredAmount" destination="cEX-ep-Ha6" id="hpP-WC-8LF"/>
+                        <outlet property="tipAmount" destination="w7Q-Mo-sJw" id="YMe-fb-agt"/>
+                        <outlet property="totalAmountWithTip" destination="Kwv-qd-Quw" id="cqV-jD-5hh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="63"/>
+        </scene>
+    </scenes>
+</document>
