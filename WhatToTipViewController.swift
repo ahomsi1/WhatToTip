@@ -59,10 +59,10 @@ class WhatToTipViewController: UIViewController, UITextFieldDelegate {
         var numericalEnteredAmount:Double? = Double(enteredAmount.text!)
         
         if (enteredAmount.text?.isEmpty)! || (enteredAmount.text == ".") {
-            tipAmount.text = "n/a"
-            totalAmountWithTip.text = "n/a"
-            
-            //add UIAlert to tell user to enter applicable value
+            let showAlert = UIAlertController(title: "Invalid Amount!", message: "Please enter a valid amount from your bill.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Back", style: .cancel, handler: nil)
+            showAlert.addAction(cancelAction)
+            present(showAlert, animated: true, completion: nil)
             
         } else if numericalEnteredAmount! >= 0.00 && numericalEnteredAmount! <= 19.99 {
             
@@ -126,3 +126,7 @@ class WhatToTipViewController: UIViewController, UITextFieldDelegate {
 //    }
     
 }
+
+    
+
+
