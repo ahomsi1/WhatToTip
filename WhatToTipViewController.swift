@@ -46,18 +46,24 @@ class WhatToTipViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func calculateButton(_ sender: UIButton) {
-
-        var numericalEnteredAmount:Double? = Double(enteredAmount.text!)
         
-            numberFormatter.usesGroupingSeparator = true
-            numberFormatter.numberStyle = .currency
+        numberFormatter.usesGroupingSeparator = true
+        numberFormatter.numberStyle = .currency
+        calculationProcedure()
+        
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
+    }
+    
+    func calculationProcedure() {
+        
+        var numericalEnteredAmount:Double? = Double(enteredAmount.text!)
         
         if (enteredAmount.text?.isEmpty)! || (enteredAmount.text == ".") {
             tipAmount.text = "n/a"
             totalAmountWithTip.text = "n/a"
             
             //add UIAlert to tell user to enter applicable value
-        
+            
         } else if numericalEnteredAmount! >= 0.00 && numericalEnteredAmount! <= 19.99 {
             
             let tippedAmount = 0.10
@@ -98,7 +104,7 @@ class WhatToTipViewController: UIViewController, UITextFieldDelegate {
             totalAmountWithTip.text = stringFormattedTotal
             
         } else if numericalEnteredAmount! >= 40 {
-           
+            
             let tippedAmount = 0.18
             let tippedDollarAmount = numericalEnteredAmount! * tippedAmount
             
@@ -110,8 +116,6 @@ class WhatToTipViewController: UIViewController, UITextFieldDelegate {
             tipAmount.text = stringTippedAmount
             totalAmountWithTip.text = stringFormattedTotal
         }
-        
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
     }
 
 //    button with review functionality to be added in the future after app is released.
@@ -122,7 +126,3 @@ class WhatToTipViewController: UIViewController, UITextFieldDelegate {
 //    }
     
 }
-
-    
-
-
